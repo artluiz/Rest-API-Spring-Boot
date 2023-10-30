@@ -1,5 +1,6 @@
 package com.curso.spring.curso.produto;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -29,6 +30,7 @@ public class Produto {
 		this.nome = dados.nome();
 		this.plataforma = dados.plataforma();
 		this.quantidade = dados.quantidade();
+		this.preco = dados.preco();
 		this.genero = dados.genero();
 		this.lançamento = dados.lançamento();
 		this.empresa = dados.empresa();
@@ -43,7 +45,8 @@ public class Produto {
 
 	@Enumerated(EnumType.STRING)
 	private Plataforma plataforma;
-
+	private BigDecimal preco;
+	
 	@Enumerated(EnumType.STRING)
 	private Genero genero;
 	private LocalDate lançamento;
